@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2019. David de Andrés and Juan Carlos Ruiz, DISCA - UPV, Development of apps for mobile devices.
+  -->
+
+<!--
+  ~ TableLayout consisting on a number of different TableRow (3).
+  ~ Views within a row are positioned one after another (left to right),
+  ~ and take all the available space (stretchColumns = "*").
+  -->
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="*">
+
+    <!-- First row -->
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- View at column 0 -->
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button1" />
+
+        <!-- No View at column 1 -->
+
+        <!-- View positioned at column 2 (layout_column) -->
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:text="@string/button2" />
+    </TableRow>
+
+    <!-- Second row -->
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- View at column 0 -->
+        <Button
+            android:id="@+id/button12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button3" />
+
+        <!-- View at column 1 -->
+        <Button
+            android:id="@+id/button11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button4" />
+
+        <!-- View at column 2 -->
+        <Button
+            android:id="@+id/button10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button5" />
+
+    </TableRow>
+
+    <!-- Third row -->
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- No View at column 0 -->
+
+        <!-- View positioned at column 1 (layout_column) that spans 2 columns (layout_span) -->
+        <Button
+            android:id="@+id/button13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_span="2"
+            android:text="@string/long_text" />
+    </TableRow>
+</TableLayout>

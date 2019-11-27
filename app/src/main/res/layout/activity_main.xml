@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2019. David de Andrés and Juan Carlos Ruiz, DISCA - UPV, Development of apps for mobile devices.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!-- All buttons share the same onClickListener -->
+    <Button
+        android:id="@+id/bVertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:onClick="testLayout"
+        android:text="@string/vertical" />
+
+    <Button
+        android:id="@+id/bHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:onClick="testLayout"
+        android:text="@string/horizontal" />
+
+    <Button
+        android:id="@+id/bNested"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:onClick="testLayout"
+        android:text="@string/nested" />
+
+    <Button
+        android:id="@+id/bRelative"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:onClick="testLayout"
+        android:text="@string/relative" />
+
+    <Button
+        android:id="@+id/bConstraint"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:onClick="testLayout"
+        android:text="@string/constraint" />
+
+    <Button
+        android:id="@+id/bFrame"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:onClick="testLayout"
+        android:text="@string/frame" />
+
+    <Button
+        android:id="@+id/bTable"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:onClick="testLayout"
+        android:text="@string/table" />
+
+    <Button
+        android:id="@+id/bGrid"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:onClick="testLayout"
+        android:text="@string/grid" />
+</LinearLayout>
