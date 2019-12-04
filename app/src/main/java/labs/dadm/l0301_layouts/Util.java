@@ -7,7 +7,7 @@ package labs.dadm.l0301_layouts;
 class Util {
 
     // Constant used as key to be passed to the ShowLayoutActivity
-    final static String LAYOUT = "layout";
+    final static String LAYOUT = "labs.dadm.l0301_layouts.layout";
 
     // Constants used as possible values that identify the layout to display
     final static int VERTICAL = 0;
