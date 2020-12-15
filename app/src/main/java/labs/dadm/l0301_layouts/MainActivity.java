@@ -24,48 +24,31 @@ public class MainActivity extends AppCompatActivity {
      */
     public void testLayout(View view) {
         Intent intent = new Intent(MainActivity.this, ShowLayoutActivity.class);
-        String extra;
-        switch (view.getId()) {
-
+        final int buttonClicked = view.getId();
+        if (buttonClicked == R.id.bVertical) {
             // Vertical layout
-            case R.id.bVertical:
-                intent.putExtra(Util.LAYOUT, Util.VERTICAL);
-                break;
-
+            intent.putExtra(Util.LAYOUT, Util.VERTICAL);
+        } else if (buttonClicked == R.id.bHorizontal) {
             // Horizontal layout
-            case R.id.bHorizontal:
-                intent.putExtra(Util.LAYOUT, Util.HORIZONTAL);
-                break;
-
+            intent.putExtra(Util.LAYOUT, Util.HORIZONTAL);
+        } else if (buttonClicked == R.id.bNested) {
             // Nested vertical and horizontal layouts
-            case R.id.bNested:
-                intent.putExtra(Util.LAYOUT, Util.NESTED);
-                break;
-
+            intent.putExtra(Util.LAYOUT, Util.NESTED);
+        } else if (buttonClicked == R.id.bRelative) {
             // Relative layout (Constraint layout is preferred)
-            case R.id.bRelative:
-                intent.putExtra(Util.LAYOUT, Util.RELATIVE);
-                break;
-
+            intent.putExtra(Util.LAYOUT, Util.RELATIVE);
+        } else if (buttonClicked == R.id.bConstraint) {
             // Constraint layout
-            case R.id.bConstraint:
-                intent.putExtra(Util.LAYOUT, Util.CONSTRAINT);
-                break;
-
+            intent.putExtra(Util.LAYOUT, Util.CONSTRAINT);
+        } else if (buttonClicked == R.id.bFrame) {
             // Frame layout
-            case R.id.bFrame:
-                intent.putExtra(Util.LAYOUT, Util.FRAME);
-                break;
-
+            intent.putExtra(Util.LAYOUT, Util.FRAME);
+        } else if (buttonClicked == R.id.bTable) {
             // Table layout
-            case R.id.bTable:
-                intent.putExtra(Util.LAYOUT, Util.TABLE);
-                break;
-
+            intent.putExtra(Util.LAYOUT, Util.TABLE);
+        } else if (buttonClicked == R.id.bGrid) {
             // Gridlayout
-            case R.id.bGrid:
-                intent.putExtra(Util.LAYOUT, Util.GRID);
-                break;
+            intent.putExtra(Util.LAYOUT, Util.GRID);
         }
         startActivity(intent);
     }
