@@ -16,15 +16,24 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // All buttons share the same OnClickListener
+        final View.OnClickListener listener = v -> testLayout(v.getId());
+
+        findViewById(R.id.bVertical).setOnClickListener(listener);
+        findViewById(R.id.bHorizontal).setOnClickListener(listener);
+        findViewById(R.id.bNested).setOnClickListener(listener);
+        findViewById(R.id.bRelative).setOnClickListener(listener);
+        findViewById(R.id.bConstraint).setOnClickListener(listener);
+        findViewById(R.id.bFrame).setOnClickListener(listener);
+        findViewById(R.id.bTable).setOnClickListener(listener);
+        findViewById(R.id.bGrid).setOnClickListener(listener);
     }
 
-    /*
-        This method is activated whenever any of the buttons is clicked.
-        It launches a new activity that displays the type of layout selected.
-     */
-    public void testLayout(View view) {
+    // This method is activated whenever any of the buttons is clicked.
+    // It launches a new activity that displays the type of layout selected.
+    public void testLayout(int buttonClicked) {
         Intent intent = new Intent(MainActivity.this, ShowLayoutActivity.class);
-        final int buttonClicked = view.getId();
         if (buttonClicked == R.id.bVertical) {
             // Vertical layout
             intent.putExtra(Util.LAYOUT, Util.VERTICAL);

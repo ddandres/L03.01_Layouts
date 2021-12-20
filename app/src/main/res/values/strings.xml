@@ -28,6 +28,7 @@
     <string name="between12">Between 1 and 2\nright side</string>
     <string name="between23">Between 2 and 3\nleft side</string>
     <string name="right_below_1">Right and below 1</string>
-    <string name="between_center_bottom">Between centred\nand bottom\naligned end\nof centred</string>
+    <string name="between_center_bottom">
+        Between centred\nand bottom\naligned end\nof centred</string>
     <string name="in_frame">Button in a frame layout</string>
 </resources>
