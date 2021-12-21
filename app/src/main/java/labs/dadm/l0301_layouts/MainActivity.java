@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
     // This method is activated whenever any of the buttons is clicked.
     // It launches a new activity that displays the type of layout selected.
-    public void testLayout(int buttonClicked) {
+    private void testLayout(int buttonClicked) {
         Intent intent = new Intent(MainActivity.this, ShowLayoutActivity.class);
         if (buttonClicked == R.id.bVertical) {
             // Vertical layout
